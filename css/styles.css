@@ -57,7 +57,9 @@ body {
   text-shadow: 1px 2px 0 #fff;
 }
 
-.home-btn, .sound-toggle {
+.header-actions { display: flex; align-items: center; gap: 8px; }
+
+.home-btn, .sound-toggle, .voice-settings-btn {
   font-size: 1.6rem;
   line-height: 1;
   border: none;
@@ -69,7 +71,7 @@ body {
   box-shadow: var(--shadow);
   transition: transform 0.08s ease;
 }
-.home-btn:active, .sound-toggle:active { transform: translateY(3px); box-shadow: none; }
+.home-btn:active, .sound-toggle:active, .voice-settings-btn:active { transform: translateY(3px); box-shadow: none; }
 
 .app-main {
   max-width: 900px;
@@ -413,6 +415,63 @@ body {
 @keyframes fall {
   to { transform: translateY(110vh) rotate(540deg); opacity: 0.9; }
 }
+
+/* ---------- voice picker modal ---------- */
+.voice-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 45, 66, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 60;
+  animation: fadein 0.2s ease;
+}
+.voice-panel {
+  background: var(--paper);
+  border-radius: 24px;
+  padding: 24px 22px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+.voice-title { margin: 0 0 6px; color: var(--blue); font-size: 1.6rem; }
+.voice-help, .voice-empty { color: var(--purple); font-size: 1.05rem; margin: 0 0 16px; }
+.voice-empty { line-height: 1.4; }
+
+.voice-select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.15rem;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 3px solid var(--blue);
+  background: #fff;
+  color: var(--ink);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.voice-try-btn {
+  border: none;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.voice-try-btn:active { transform: translateY(3px); box-shadow: none; }
+
+.voice-close { width: 100%; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
