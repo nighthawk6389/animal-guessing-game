@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1982c4" />
+  <title>Guess the Animal!</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>" />
+</head>
+<body>
+  <header class="app-header">
+    <button id="home-btn" class="home-btn" type="button" aria-label="Back to home">🏠</button>
+    <h1 class="app-title">🦁 Guess the Animal! 🐧</h1>
+    <button id="sound-toggle" class="sound-toggle" type="button" aria-label="Sound is on">🔊</button>
+  </header>
+
+  <main class="app-main">
+    <!-- Home: pick a mode -->
+    <section id="home" class="home">
+      <p class="home-subtitle">Pick a way to play!</p>
+      <!-- mode tiles injected by app.js -->
+    </section>
+
+    <!-- Stage: a running mode mounts here -->
+    <section id="stage" class="stage hidden">
+      <h2 id="stage-title" class="stage-title"></h2>
+      <div id="stage-mount" class="stage-mount"></div>
+    </section>
+  </main>
+
+  <!-- load order matters: data -> audio -> ui -> modes -> app -->
+  <script src="js/data/animals.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/modes/singlePlayer.js"></script>
+  <script src="js/modes/clueHelper.js"></script>
+  <script src="js/modes/learnToRead.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
