@@ -12,7 +12,10 @@
   <header class="app-header">
     <button id="home-btn" class="home-btn" type="button" aria-label="Back to home">🏠</button>
     <h1 class="app-title">🦁 Guess the Animal! 🐧</h1>
-    <button id="sound-toggle" class="sound-toggle" type="button" aria-label="Sound is on">🔊</button>
+    <div class="header-actions">
+      <button id="voice-settings" class="voice-settings-btn" type="button" aria-label="Choose a voice" title="Choose a voice">🗣️</button>
+      <button id="sound-toggle" class="sound-toggle" type="button" aria-label="Sound is on">🔊</button>
+    </div>
   </header>
 
   <main class="app-main">
@@ -33,6 +36,7 @@
   <script src="js/data/animals.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/ui.js"></script>
+  <script src="js/voiceSettings.js"></script>
   <script src="js/modes/singlePlayer.js"></script>
   <script src="js/modes/clueHelper.js"></script>
   <script src="js/modes/learnToRead.js"></script>

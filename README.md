@@ -14,8 +14,26 @@ guess the animal. Built as a plain static site (HTML/CSS/JavaScript), so there's
 | 🔤 **Learn to Read** | Early readers | Each clue is a short **3–4 letter word** on a big card. Tap a card to hear it sounded out, read the words, then tap the matching animal. |
 
 Everything is read aloud using the browser's built-in text-to-speech, so a child
-who can't read yet can play **Play & Guess** on their own. There's a 🔊/🔇 button
-in the top corner to mute the voice.
+who can't read yet can play **Play & Guess** on their own. In the top corner there's
+a 🔊/🔇 button to mute the voice and a 🗣️ button to **choose a voice**.
+
+## 🗣️ Choosing a nicer (less robotic) voice
+
+Tap the **🗣️** button in the top corner, pick a voice from the list, and tap
+**“Try it”** to hear it. Your choice is remembered on that device. The game
+automatically prefers the most natural-sounding voice it can find.
+
+The voices available come from your device/browser, so to get the best ones:
+
+- **Android (Chrome):** the **Google** voices sound the most human. Make sure
+  they're installed: **Settings → System → Languages & input → Text-to-speech
+  output** → set the engine to **Google Text-to-speech Engine**, then install/select
+  a higher-quality voice. Some premium voices stream over the network, so being
+  online helps. Reopen the 🗣️ picker and choose a Google voice.
+- **iPhone/iPad (Safari):** download an **Enhanced/Premium** voice in
+  **Settings → Accessibility → Spoken Content → Voices**, then pick it in 🗣️.
+- **Windows/Mac/Chrome:** Chrome's **Google** voices and Windows **Natural** voices
+  sound best — pick one in the 🗣️ list.
 
 ## ▶️ How to run it
 
